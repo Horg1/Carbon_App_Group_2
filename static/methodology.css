@@ -1,152 +1,41 @@
-/* Minimal ESG / carbon palette (methodology page) */
-
 :root{
-  --bg: #F7F8F6;
-  --surface: #EEF2EE;
-  --card: #FFFFFF;
-  --border: #D2DAD2;
-  --text: #1F2A24;
-  --muted: #58665C;
-  --accent: #2F5D3A;
-  --accent-soft: #6FAF7A;
-  --shadow: 0 1px 2px rgba(0,0,0,0.06);
+  --bg: #f4f8f7;
+  --surface: transparent;
+  --card: #ffffff;
+  --text: #1c2b26;
+  --accent: #0f766e;
+  --shadow: 0 12px 30px rgba(15,35,30,0.08);
 }
 
-/* Utilities  */
-p{
-  margin: 10px 0;
-  font-size: 18px;
-  color: var(--text);
-}
+p, h4, ol{ font-size: 18px; color: var(--text); }
+h4{ text-align: left; font-weight: 600; }
 
-h4{
-  font-size: 18px;
-  text-align: left;
-  font-weight: bold;
-  color: var(--text);
-}
+.section_header_methodology,
+.section_body_methodology{ background-color: var(--surface); }
 
-ol{
-  font-size: 18px;
-  color: var(--text);
-}
+.header,
+.methodology{ display: flex; align-items: start; background: transparent; }
 
-/* Section header */
-.section_header_methodology{
-  background-color: var(--surface);
-}
-
-.header{
-  display: flex;
-  align-items: start;
-  background: var(--surface);
-}
-
-.header .box{
+.header .box,
+.methodology .box_table1,
+.methodology .box_table2{
   flex: 1;
-  background: var(--card);
+  background: linear-gradient(160deg, #fff 0%, #f8fbfa 100%);
   color: var(--text);
-  border: 1px solid rgba(31,42,36,0.10);
+  border: 1px solid rgba(31,42,36,0.09);
   box-shadow: var(--shadow);
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
+  border-radius: 18px;
+  margin: 10px;
+  padding: 18px 20px;
   text-align:center;
-  align-items: center;
-  justify-content: center;
 }
 
 .header .box:nth-of-type(1){ flex-grow:2; }
 .header .box:nth-of-type(2){ flex-grow:1; }
-
-.container_buttons_links_header{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap:wrap;
-}
-
-.container_buttons_links_header a:hover{
-  color: var(--accent);
-}
-
-/* keep original selector + common button patterns */
-.container_buttons_links_header btn,
-.container_buttons_links_header .btn,
-.container_buttons_links_header button,
-.container_buttons_links_header a.btn{
-  width: 100px;
-  height: 100px;
-  background: var(--card);
-  color: var(--text);
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  border: 1px solid rgba(31,42,36,0.10);
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-}
-
-/* Section methodology */
-.section_body_methodology{
-  background-color: var(--bg);
-}
-
-.methodology{
-  display: flex;
-  align-items: start;
-  background: var(--bg);
-}
-
-/* Table with one column */
-.methodology .box_table1{
-  flex: 1;
-  background: var(--card);
-  color: var(--text);
-  border: 1px solid rgba(31,42,36,0.10);
-  box-shadow: var(--shadow);
-  border-radius: 10px;
-  margin: 10px 10px 10px 10px;
-  padding: 15px 15px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-}
-
-/* side spacers: blend into page */
 .methodology .box_table1:nth-of-type(1),
-.methodology .box_table1:nth-of-type(3){
-  flex-grow:1;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.methodology .box_table1:nth-of-type(2){
-  flex-grow:4;
-}
-
-/* Table with two columns */
-.methodology .box_table2{
-  flex: 1;
-  background: var(--card);
-  color: var(--text);
-  border: 1px solid rgba(31,42,36,0.10);
-  box-shadow: var(--shadow);
-  border-radius: 10px;
-  margin: 10px 10px 10px 10px;
-  padding: 15px 15px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-}
-
+.methodology .box_table1:nth-of-type(3){ flex-grow:1; background: transparent; border: none; box-shadow: none; }
+.methodology .box_table1:nth-of-type(2){ flex-grow:4; }
 .methodology .box_table2:nth-of-type(1),
-.methodology .box_table2:nth-of-type(2){
-  flex-grow:1;
-}
+.methodology .box_table2:nth-of-type(2){ flex-grow:1; }
 
-@media (max-width:768px){
-  .header{ flex-direction: column; }
-  .methodology{ flex-direction: column; }
-}
+@media (max-width:768px){ .header, .methodology{ flex-direction: column; } }
