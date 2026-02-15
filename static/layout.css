@@ -1,10 +1,17 @@
-/* Colors */
-/* Rainy theme 5 -Green Digitalization Course and Students Apps-:
-Navbar (background): #8bbbd9
-Navbar (a hover): #466fa6
-Navbar (logo): #568c63
-Navbar (a menu): #2a4359
-*/
+/* Minimal ESG / carbon palette (global layout) */
+
+:root{
+  --bg: #F7F8F6;           /* app background */
+  --surface: #EEF2EE;      /* section surfaces */
+  --surface-2: #E3EAE3;    /* navbar/footer surface */
+  --card: #FFFFFF;         /* cards */
+  --border: #D2DAD2;       /* subtle borders */
+  --text: #1F2A24;         /* primary text */
+  --muted: #58665C;        /* secondary text */
+  --accent: #2F5D3A;       /* primary green */
+  --accent-soft: #6FAF7A;  /* hover/underline */
+  --shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
 
 /* Google fonts Roboto  */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
@@ -15,98 +22,118 @@ Navbar (a menu): #2a4359
   padding: 0;
   margin: 0;
 }
-body {
+
+body{
   font-family: 'Roboto', sans-serif;
-  background: #fff;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
 }
-.container {
+
+.container{
   margin: auto;
   max-width: 1320px;
 }
-ul { 
+
+ul{
   list-style: none;
-  font-size: 400;
+  font-weight: 400;
 }
-a {
-  color: #333;
+
+a{
+  color: var(--text);
   text-decoration: none;
 }
-h1, h2 {
+
+h1, h2{
   font-weight: 400;
   line-height: 1.2;
 }
-p {
+
+p{
   margin: 10px 0;
   font-size: 14px;
+  color: var(--text);
 }
-img {
+
+img{
   width: 100%;
 }
+
 /* Navbar  */
-.section_carbon_app_navbar {
-  background-color:#8bbbd9;
+.section_carbon_app_navbar{
+  background-color: var(--surface-2);
+  border-bottom: 1px solid rgba(31,42,36,0.10);
 }
-.carbon_app_navbar {
+
+.carbon_app_navbar{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   height: 70px;
   align-items: center;
-  background-color: #8bbbd9;
+  background-color: var(--surface-2);
   padding: 0 0px;
 }
-.carbon_app_navbar a {
-  color: #2a4359;
+
+.carbon_app_navbar a{
+  color: var(--text);
   padding: 10px 20px;
   margin: 0 5px;
   font-size: 20px;
   text-decoration: none;
 }
+
 .carbon_app_navbar a:hover{
-  border-bottom: #2a4359 4px solid;
+  border-bottom: var(--accent-soft) 4px solid;
 }
-.carbon_app_navbar ul {
+
+.carbon_app_navbar ul{
   display: flex;
   flex-direction: row;
 }
-.carbon_app_navbar .logo {
+
+.carbon_app_navbar .logo{
   font-weight: 400;
 }
-.text-logo {
-  color: #568c63;
+
+.text-logo{
+  color: var(--accent);
 }
+
 /* Footer  */
 .section_footer{
-  background-color:#8bbbd9;
+  background-color: var(--surface-2);
+  border-top: 1px solid rgba(31,42,36,0.10);
 }
-.footer {
+
+.footer{
   display: flex;
   flex-direction: row;
   justify-content: center;
   height: 70px;
   align-items: center;
-  background-color: #8bbbd9;
+  background-color: var(--surface-2);
   padding: 0 0px;
+  color: var(--muted);
 }
-
 
 /* Media query */
 @media(max-width:768px){
-  .carbon_app_navbar {
+  .carbon_app_navbar{
     height: 160px;
     flex-direction: column;
   }
-  .carbon_app_navbar a {
+  .carbon_app_navbar a{
     font-size: 15px;
     padding: 5px 20px;
   }
-  .carbon_app_navbar ul {
+  .carbon_app_navbar ul{
     display: flex;
     flex-direction: column;
   }
   .carbon_app_navbar a:hover{
-    color: #568c63;
-    border-bottom: #2a4359 2px solid;
+    color: var(--accent);
+    border-bottom: var(--accent-soft) 2px solid;
   }
 }
