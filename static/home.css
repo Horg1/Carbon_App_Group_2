@@ -34,8 +34,8 @@ p{ margin: 10px 0; font-size: 18px; color: var(--text); }
 }
 
 .header_home{
-  min-height: 420px;
-  align-items: center;
+  min-height: 720px;
+  align-items: flex-end; 
 }
 
 .hero-content{
