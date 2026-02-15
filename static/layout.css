@@ -1,9 +1,9 @@
 /* Minimal ESG / carbon palette (global layout) */
 
 :root{
-  --bg: #F7F8F6;           /* app background */
+  --bg: #FFFFFF;           /* app background */
   --surface: #EEF2EE;      /* section surfaces */
-  --surface-2: #E3EAE3;    /* navbar/footer surface */
+  --surface-2: #FFFFFF;    /* navbar/footer surface */
   --card: #FFFFFF;         /* cards */
   --border: #D2DAD2;       /* subtle borders */
   --text: #1F2A24;         /* primary text */
@@ -95,6 +95,23 @@ img{
 
 .carbon_app_navbar .logo{
   font-weight: 400;
+}
+
+.carbon_app_navbar .logo a{
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.carbon_app_navbar .logo a:hover{
+  border-bottom: none;
+}
+
+.navbar-logo{
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .text-logo{
