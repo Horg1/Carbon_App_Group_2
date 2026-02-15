@@ -10,7 +10,12 @@
 p, h4, ol{ font-size: 18px; color: var(--text); }
 h4{ text-align: left; font-weight: 600; }
 
-.section_header_methodology,
+.section_header_methodology{
+  background:
+    linear-gradient(rgba(244, 248, 247, 0.65), rgba(244, 248, 247, 0.65)),
+    url('/static/img/methodology-background.jpg') center center / cover no-repeat;
+}
+
 .section_body_methodology{ background-color: var(--surface); }
 
 .header,
@@ -31,7 +36,12 @@ h4{ text-align: left; font-weight: 600; }
 }
 
 .header .box:nth-of-type(1){ flex-grow:2; }
-.header .box:nth-of-type(2){ flex-grow:1; }
+.section_header_methodology .header .box{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
 .methodology .box_table1:nth-of-type(1),
 .methodology .box_table1:nth-of-type(3){ flex-grow:1; background: transparent; border: none; box-shadow: none; }
 .methodology .box_table1:nth-of-type(2){ flex-grow:4; }
