@@ -15,4 +15,4 @@ def carbon_app():
     return render_template('carbon_app.html', title='carbon_app')
 
 if __name__=='__main__':
-  application.run(debug=True)  
+  application.run(debug=True)
