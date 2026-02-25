@@ -42,23 +42,23 @@
           <div class="container">
             <div class="carbon_app_navbar">
               <h1 class="logo">
-                <a href="{{url_for('home')}}" aria-label="Home">
+                <a href="{{url_for('home.home_home')}}" aria-label="Home">
                   <img class="navbar-logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Carbon App logo">
                 </a>
               </h1>
               <nav>
                 <ul>
                     <li>
-                        <a href="{{url_for('methodology')}}">Methology</a>
+                        <a href="{{url_for('methodology.methodology_home')}}">Methology</a>
                     </li>
                     <li>
-                        <a href="{{url_for('home')}}">Carbon App</a>
+                        <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
                     </li>
                     <li>
-                        <a href="#">Sign In</a>
+                        <a href="{{url_for('users.login')}}">Sign In</a>
                     </li>
                     <li>
-                        <a href="#">Create Account</a>
+                        <a href="{{url_for('users.register')}}">Create Account</a>
                     </li>
                 </ul>
               </nav> 
