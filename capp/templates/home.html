@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Header -->
+<section class="section_header_home">
+  <div class="container">
+
+    <div class="header_home">
+      <div class="hero-content"> 
+        <h1 style="font-size:55px;"><span class="text-logo"> Home</span></h1>
+        <p style="text-align:left;">
+            Carbon emissions are one of the main drivers of global warming, with energy use, transportation, and industrial activity contributing the largest share worldwide. Tracking emissions helps individuals and organizations identify where their climate impact is highest and where meaningful reductions can be made. Our platform is built to support better decisions by making carbon data easier to understand, compare, and act on.
+        </p>
+
+        <div class="container_buttons_links_header">
+          <div class="btn">
+            <a href="{{url_for('users.register')}}" class="btn btn-primary btn-lg mr-2" style="background-color:#007bff;">Create Account</a>
+          </div>
+          <div class="btn">
+            <a href="{{url_for('users.login')}}" class="btn btn-primary btn-lg mr-2" style="background-color:#007bff;">Sign In</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section> 
+
+<!-- Developers -->
+<section class="section_developers">
+  <div class="container">
+    <div class="developers" style="display:block;">
+      <h1 style="text-align:center;">Our Team</h1>
+      <p>Our team of economists and developers ...</p>
+    </div>
+
+    <div class="developers">
+      <div class="box">
+        <h3>Andrej Spasojevic</h3>
+        <p>Bachelor in Economics and Business Administration at NHH, Bergen</p>
+        <img class="team-photo" src="{{ url_for('static', filename='img/team/andrej-spasojevic.jpg') }}" alt="Andrej Spasojevic">
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="https://www.linkedin.com/in/andrej-spasojevic/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Kristian Buvik</h3>
+        <p>Bachelor in Economics and Business Administration at NHH, Bergen</p>
+        <img class="team-photo" src="{{ url_for('static', filename='img/team/kristian-buvik.jpg') }}" alt="Kristian Buvik">
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="https://www.linkedin.com/in/kristian-buvik/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Lorentz Mowinckel</h3>
+        <p>Bachelor in Economics and Business Administration at NHH, Bergen</p>
+        <img class="team-photo" src="{{ url_for('static', filename='img/team/lorentz-mowinckel.jpg') }}" alt="Lorentz Mowinckel">
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="https://www.linkedin.com/in/lorentz-mowinckel/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="developers">
+      <div class="box2">
+        <h3>Nicolai Mowinckel Haukedal</h3>
+        <p>Bachelor in Economics and Business Administration at NHH, Bergen</p>
+        <img class="team-photo" src="{{ url_for('static', filename='img/team/nicolai-mowinckel-haukedal.jpg') }}" alt="Nicolai Mowinckel Haukedal">
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="https://www.linkedin.com/in/nicolai-mowinckel-haukedal/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="box2">
+        <h3>Magnus Skredderberget</h3>
+        <p>Bachelor in Economics and Business Administration at NHH, Bergen</p>
+        <img class="team-photo" src="{{ url_for('static', filename='img/team/magnus-skredderberget.jpg') }}" alt="Magnus Skredderberget">
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="https://www.linkedin.com/in/magnus-skredderberget/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="box2">
+        <h3>Peder Horgen</h3>
+        <p>Bachelor in Economics and Business Administration at NHH, Bergen</p>
+        <img class="team-photo" src="{{ url_for('static', filename='img/team/peder-horgen.jpg') }}" alt="Peder Horgen">
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="https://www.linkedin.com/in/peder-horgen/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="developers">
+      <div class="box3">
+        <h3>Per Magnus Reitan</h3>
+        <p>Bachelor in Economics and Business Administration at NHH, Bergen</p>
+        <img class="team-photo" src="{{ url_for('static', filename='img/team/per-magnus-reitan.jpg') }}" alt="Per Magnus Reitan">
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="https://www.linkedin.com/in/per-magnus-reitan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="box3">
+        <h3>Sondre Nøss Rostrup</h3>
+        <p>Bachelor in Economics and Business Administration at NHH, Bergen</p>
+        <img class="team-photo" src="{{ url_for('static', filename='img/team/sondre-noss-rostrup.jpg') }}" alt="Sondre Nøss Rostrup">
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="https://www.linkedin.com/in/sondre-noss-rostrup/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+        
+{% endblock content %}
