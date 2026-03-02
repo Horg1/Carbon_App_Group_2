@@ -1,6 +1,6 @@
 from flask import Flask
 
-application = Flask(__name__, static_folder='../static')
+application = Flask(__name__)
 
 from capp.carbon_app.routes import carbon_app
 from capp.home.routes import home
