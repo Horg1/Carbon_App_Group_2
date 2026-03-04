@@ -84,15 +84,15 @@
         <section class="section_footer">
           <div class="container">
             <div class="footer">
-              <div class="footer-brand">
-                <a href="{{url_for('home.home_home')}}" aria-label="Home" class="footer-logo-link">
-                  <img class="footer-logo" src="{{ url_for('static', filename='img/logo-placeholder.svg') }}" alt="Carbon App logo">
-                </a>
-                <p>Carbon App</p>
-              </div>
-
+              
+              
               <nav class="footer-nav" aria-label="Footer navigation">
                 <ul>
+                  <div class="footer-brand">
+                <li><a href="{{url_for('home.home_home')}}" aria-label="Home" class="footer-logo-link">
+                  <img class="footer-logo" src="{{ url_for('static', filename='img/logo-placeholder.svg') }}" alt="Carbon App logo">
+                </a></li>
+                <li><a href="#top" class="footer-top-link" aria-label="Go to top">Top ↑</a></li>
                   <li><a href="{{url_for('methodology.methodology_home')}}">Methodology</a></li>
                   <li><a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a></li>
                   <li><a href="{{url_for('users.login')}}">Sign In</a></li>
@@ -100,7 +100,7 @@
                 </ul>
               </nav>
 
-              <a href="#top" class="footer-top-link" aria-label="Go to top">Top ↑</a>
+              
             </div>
           </div>
         </section>
