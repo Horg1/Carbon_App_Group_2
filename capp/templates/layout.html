@@ -26,6 +26,7 @@
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='methodology.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='carbon_app.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user.css') }}">
 
       <!-- To activate media queries in devices -->
       <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
@@ -37,13 +38,13 @@
         {% endif %}
         
     </head>
-    <body>
+    <body id="top">
         <section class="section_carbon_app_navbar">
           <div class="container">
             <div class="carbon_app_navbar">
               <h1 class="logo">
                 <a href="{{url_for('home.home_home')}}" aria-label="Home">
-                  <img class="navbar-logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Carbon App logo">
+                  <img class="navbar-logo" src="{{ url_for('static', filename='img/logo-placeholder.svg') }}" alt="Carbon App logo">
                 </a>
               </h1>
               <nav>
@@ -66,17 +67,40 @@
           </div>
         </section>
 
+        <div class="container mt-3">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}" role="alert">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+        </div>
+
         {% block content %} {% endblock %}
 
         <section class="section_footer">
           <div class="container">
             <div class="footer">
-              <h1>
-                Carbon App 
-                <a href="#">
-                  <i class="fa-solid fa-circle-up" style="color: #568c63"></i>
+              <div class="footer-brand">
+                <a href="{{url_for('home.home_home')}}" aria-label="Home" class="footer-logo-link">
+                  <img class="footer-logo" src="{{ url_for('static', filename='img/logo-placeholder.svg') }}" alt="Carbon App logo">
                 </a>
-              </h1>
+                <p>Carbon App</p>
+              </div>
+
+              <nav class="footer-nav" aria-label="Footer navigation">
+                <ul>
+                  <li><a href="{{url_for('methodology.methodology_home')}}">Methodology</a></li>
+                  <li><a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a></li>
+                  <li><a href="{{url_for('users.login')}}">Sign In</a></li>
+                  <li><a href="{{url_for('users.register')}}">Create Account</a></li>
+                </ul>
+              </nav>
+
+              <a href="#top" class="footer-top-link" aria-label="Go to top">Top ↑</a>
             </div>
           </div>
         </section>
