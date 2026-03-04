@@ -70,9 +70,16 @@
           <div class="form-group mt-3">
             {{ form.submit(class="btn btn-primary") }}
           </div>
+          <div class="border-top pt-3">
+                    <small>
+                        Already Have An Account? <a class="ml-5" href="{{ url_for('users.login') }}">Sign In</a>
+                    </small>
+                </div>
+
         </form>
       </div>
     </div>
+    
   </div>
 </section>
 {% endblock content %}
