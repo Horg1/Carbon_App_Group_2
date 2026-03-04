@@ -84,7 +84,8 @@ img{ width: 100%; }
 .footer{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   gap: 20px;
   padding: 18px 0;
 }
@@ -92,7 +93,7 @@ img{ width: 100%; }
 .footer-brand{
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
 }
 
 .footer-logo-link{
@@ -117,6 +118,7 @@ img{ width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   gap: 6px;
   flex-wrap: wrap;
 }
