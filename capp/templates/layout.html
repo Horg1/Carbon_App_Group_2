@@ -42,13 +42,13 @@
         <section class="section_carbon_app_navbar">
           <div class="container">
             <div class="carbon_app_navbar">
-              <h1 class="logo">
-                <a href="{{url_for('home.home_home')}}" aria-label="Home">
-                  <img class="navbar-logo" src="{{ url_for('static', filename='img/logo-placeholder.svg') }}" alt="Carbon App logo">
-                </a>
-              </h1>
               <nav>
                 <ul>
+                    <li class="nav-logo-item">
+                        <a href="{{url_for('home.home_home')}}" aria-label="Home">
+                            <img class="navbar-logo" src="{{ url_for('static', filename='img/logo-placeholder.svg') }}" alt="Carbon App logo">
+                        </a>
+                    </li>
                     <li>
                         <a href="{{url_for('methodology.methodology_home')}}">Methology</a>
                     </li>
