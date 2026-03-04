@@ -1,0 +1,3 @@
+- position: sticky;
+- change footer & nav bar to show/hide create account/sign in/logout
+- remove create account on home page, only nav bar & footer
