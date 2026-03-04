@@ -1,4 +1,4 @@
-from flask import Blueprint, flash, redirect, render_template, url_for
+from flask import Blueprint, flash, redirect, render_template, session, url_for
 
 from capp.users.forms import LoginForm, RegistrationForm
 
@@ -31,6 +31,8 @@ def login():
         user = REGISTERED_USERS.get(form.email.data)
 
         if user and user['password'] == form.password.data:
+            session['user_email'] = form.email.data
+            session['username'] = user['username']
             flash('Login successful. You can start to use the app.', 'success')
             return redirect(url_for('home.home_home'))
 
@@ -38,3 +40,11 @@ def login():
         return redirect(url_for('users.login'))
 
     return render_template('users/login.html', title='Login', form=form)
+
+
+@users.route('/logout')
+def logout():
+    session.pop('user_email', None)
+    session.pop('username', None)
+    flash('You have been logged out.', 'success')
+    return redirect(url_for('home.home_home'))
