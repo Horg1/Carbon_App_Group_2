@@ -1,6 +1,9 @@
+import os
+
 from flask import Flask
 
 application = Flask(__name__)
+application.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-me')
 
 from capp.carbon_app.routes import carbon_app
 from capp.home.routes import home
