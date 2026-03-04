@@ -1,10 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
-<section class="section_header_home">
+<section class="section_header_home user-auth-page">
   <div class="container">
     <div class="header_home">
-      <div class="hero-content">
-        <h1 style="font-size:55px;"><span class="text-logo">Create account</span></h1>
+      <div class="hero-content user-auth-card">
+        <h1 class="auth-title"><span class="text-logo">Create account</span></h1>
         <form method="POST" action="">
           {{ form.hidden_tag() }}
           <fieldset class="form-group">
@@ -71,6 +71,7 @@
             {{ form.submit(class="btn btn-primary") }}
           </div>
         </form>
+          <p class="auth-redirect">Already have an account? <a href="{{ url_for('users.login') }}">Sign in here</a>.</p>
       </div>
     </div>
   </div>
